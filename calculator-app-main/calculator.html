@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator app</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+      <div class="top">
+          <h1>Calculator</h1>
+      </div>
+      <div class="caixa">
+        <p id="display"></p>
+      </div>
+      <section class="table"> 
+        <section class="tabela">
+            <table class="numeros">
+            
+                <tr>
+                    <td><input class="botao" type="button" onclick="insert('7')" id="num7" value="7"></td>
+                    <td><input class="botao" type="button" onclick="insert('8')" id="num8" value="8"></td>
+                    <td><input class="botao" type="button" onclick="insert('9')" id="num9" value="9"></td>
+                    <td><input class="botao" type="button" onclick="delet()" id="del" value="Del"></td>
+                </tr>
+                <tr>
+                    <td><input class="botao" type="button" onclick="insert('4')" id="num4" value="4"></td>
+                    <td><input class="botao" type="button" onclick="insert('5')" id="num5" value="5"></td>
+                    <td><input class="botao" type="button" onclick="insert('6')" id="num6" value="6"></td>
+                    <td><input class="botao" type="button" onclick="insert('+')" id="soma" value="+"></td>
+                </tr>
+                <tr>
+                    <td><input class="botao" type="button" onclick="insert('1')" id="num1" value="1"></td>
+                    <td><input class="botao" type="button" onclick="insert('2')" id="num2" value="2"></td>
+                    <td><input class="botao" type="button" onclick="insert('3')" id="num3" value="3"></td>
+                    <td><input class="botao" type="button" onclick="insert('-')" id="subtracao" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input class="botao" type="button" onclick="insert('.')" id="ponto" value="."></td>
+                    <td><input class="botao" type="button" onclick="insert('0')" id="num0" value="0"></td>
+                    <td><input class="botao" type="button" onclick="insert('/')" id="divisao" value="/"></td>
+                    <td><input class="botao" type="button" onclick="insert('*')" id="multiplicacao" value="x"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="botao" onclick="limpar()" type="button" id="limpar" value="RESET"></td>
+                    <td colspan="2"><input class="botao" onclick="conta()" type="button" id="resultado" value="="></td>
+                </tr>
+
+            </table>
+        </section>
+      </section>
+
+<script src="calculator.js"></script>
+</body>
+</html>

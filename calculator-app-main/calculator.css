@@ -1,0 +1,81 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'League Spartan', sans-serif;
+    background-color: rgb(3, 75, 71);
+   
+    
+}
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+h1{
+    color: aliceblue;
+    background-color: black;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 250px;
+    width: 11%;
+    text-align: center;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.caixa{
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 50px;  
+}
+#display{
+background-color: aliceblue;
+width: 210px;
+height: 50px;
+margin-top: -1px;
+font-size: 30px;
+text-align: end;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+}
+
+input{
+    background-color: black;
+    color: aliceblue; 
+    border-radius: 5px;  
+}
+.botao{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;  
+}
+
+.numeros tr td :hover{
+background-color:rgb(95, 92, 97)
+}
+.numeros tr td #limpar{
+    padding-right: 94px;
+    
+}
+.numeros tr td #resultado{
+    padding-right: 94px;
+}
+
+
+
+
+
