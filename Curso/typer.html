@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO</title>
+    <link rel="stylesheet" href="resp.css">
+    <style>
+       body{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(0, 0, 0);
+       }
+       h1{
+        color: rgb(15, 224, 172);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 70px;
+       }
+       p{
+        color: rgb(247, 101, 17);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+       }
+       .container1{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-top: 100px;
+       }
+       #bnt {
+        width: 50vw;
+        height: 5vh;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+       }
+       #bnt2 {
+        width: 50vw;
+        height: 5vh;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+       }
+       #bnt3 {
+        width: 50vw;
+        height: 5vh;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+       }
+       #proximo{
+        width: 10vw;
+        height: 8vh;
+        display: block;
+        margin-left: 39%;
+        margin-top: 40px;
+        font-size: 60px;
+        color: rgb(247, 101, 17);
+        background: rgb(15, 224, 172);
+        border-radius: 10px;
+        cursor: pointer;
+       }
+       #resposta{
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        background-color: rgb(247, 101, 17);
+        height: 10vh;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 10px;
+        padding-top: 35px;
+        max-width: 50vw;
+       }
+       
+    </style>
+    
+</head>
+<body>
+    <section class="container1">
+        <div class="curso">
+            <h1>Cursos Typer</h1>
+        </div>
+        <div class="form">
+            <p>Qual é seu nome?</p> <input type="text" onchange="selectName()" id="bnt">
+            <p>Sua idade?</p> <input type="text" onchange="selectIdade()" id="bnt2">
+            <p class="pergunta">Qual linguagem está aprendendo?</p>
+                <select name="Linguagens" onchange="selectLingua()" id="bnt3">
+                    <option value="Nenhuma">Nenhuma </option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#"> C#</option>
+                    <option value="Python">Python</option>
+                    <option value="Sql">Sql</option>
+                    <option value="Php">Php</option>
+                    <option value="Java">Java</option>
+                </select> 
+                    <input type="button" value=">"  onclick="next()" id="proximo">
+                <p id="resposta"></p>
+        </div>
+    </section>
+
+    <script>
+
+       function selectLingua(){
+             let lingua = document.getElementById("bnt3").value
+            document.getElementById("resposta").innerHTML = lingua 
+    }
+        function selectName(){
+             var nome = document.getElementById("bnt").value
+            document.getElementById("resposta").innerHTML = nome
+    }
+        function selectIdade(){
+             let anos = document.getElementById("bnt2").value
+            document.getElementById("resposta").innerHTML = anos
+    }
+         function next(){
+             let nome = document.getElementById("bnt").value
+             let anos = document.getElementById("bnt2").value
+            let lingua = document.getElementById("bnt3").value
+            let botao = document.getElementById("proximo")
+
+        if(lingua == "Nenhuma"){
+            document.getElementById("resposta").innerHTML = `Bem vindo ${nome}, sua idade é de ${anos} anos. Escolha seu curso em nossa plataforma`
+            return
+        }
+        document.getElementById("resposta").innerHTML = `Bem vindo ${nome}, sua idade é de ${anos} anos. Parabéns por está cursando ${lingua}`
+    }
+    </script>
+</body>
+</html>

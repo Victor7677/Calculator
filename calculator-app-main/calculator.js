@@ -1,3 +1,4 @@
+let recomeçar = false
 function insert (digitos){
     document.getElementById('display').innerHTML = digitos
 }
@@ -6,15 +7,21 @@ function limpar(){
     document.getElementById('display').innerHTML = ("")
 }
 function insert (digitos){
+    if(recomeçar){
+        document.getElementById('display').innerHTML = ("")
+    }
+    recomeçar= false
 const numero = document.getElementById('display').innerHTML
       document.getElementById('display').innerHTML = numero + digitos
 }  
 function conta()
-{
+{ 
     const resultado = document.getElementById('display').innerHTML
     if(resultado){
         document.getElementById('display').innerHTML= eval(resultado)
+        recomeçar = true
     }
+    
 }
 
 function delet(){

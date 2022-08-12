@@ -1,0 +1,16 @@
+@media (max-width:700px){
+    .container1{
+        margin-top: 50px;
+        
+    }
+    .pergunta{
+        max-width: 50vw;
+    }
+    #proximo{
+        width: 25vw;
+        margin-left: 65px;
+    }
+    #resposta{
+        height: 25vh;
+    }
+}
